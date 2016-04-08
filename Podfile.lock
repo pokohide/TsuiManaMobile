@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (3.3.1)
+  - ObjectMapper (1.2.0)
+  - PageMenu (1.2.9)
+  - PullToRefreshSwift (2.0.0)
+  - Realm (0.98.6):
+    - Realm/Headers (= 0.98.6)
+  - Realm/Headers (0.98.6)
+  - RealmSwift (0.98.6):
+    - Realm (= 0.98.6)
+  - SlideMenuControllerSwift (2.1.0)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.3.2)
+  - TOWebViewController (2.2.3):
+    - TOWebViewController/Core (= 2.2.3)
+  - TOWebViewController/Core (2.2.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - ObjectMapper
+  - PageMenu
+  - PullToRefreshSwift
+  - RealmSwift
+  - SlideMenuControllerSwift
+  - SVProgressHUD
+  - SwiftyJSON
+  - TOWebViewController
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  PullToRefreshSwift: 5c509e89c6638eae689813b665eff1a0ea0560d3
+  Realm: 44803f35418c5d89b27825a564247fcd190de37e
+  RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  SlideMenuControllerSwift: 0ed532750dc8574eefda189d0f25805bc967ab7a
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TOWebViewController: ca47b9aeefe66acb3353d197dc8270338540b116
+
+COCOAPODS: 0.39.0
