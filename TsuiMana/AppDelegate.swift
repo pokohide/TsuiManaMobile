@@ -8,17 +8,31 @@
 
 import UIKit
 import CoreData
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // スライドメニュー用の追加分
+//        let tabbarController: TabBarController = TabBarController()
+//        let menuController = MenuViewController()
+//        
+//        let slideMenuController = SlideMenuController(mainViewController: tabbarController, leftMenuViewController: menuController)
+//        
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = slideMenuController
+//        self.window?.makeKeyAndVisible()
+        
+        //
+        
         return true
     }
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
