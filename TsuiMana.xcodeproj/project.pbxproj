@@ -17,11 +17,14 @@
 		F26734D11CB7B21500C5FF0F /* TsuiManaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734D01CB7B21500C5FF0F /* TsuiManaTests.swift */; };
 		F26734DC1CB7B21500C5FF0F /* TsuiManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734DB1CB7B21500C5FF0F /* TsuiManaUITests.swift */; };
 		F26734F31CB7CCEC00C5FF0F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734F11CB7CCEC00C5FF0F /* TableViewController.swift */; };
-		F26734F41CB7CCEC00C5FF0F /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26734F21CB7CCEC00C5FF0F /* CategoryViewController.xib */; };
 		F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */; };
 		F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734F91CB8392A00C5FF0F /* Evideo.swift */; };
 		F26734FC1CB83FE200C5FF0F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734FB1CB83FE200C5FF0F /* TabBarController.swift */; };
 		F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734FD1CB840C800C5FF0F /* MenuViewController.swift */; };
+		F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */; };
+		F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */; };
+		F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */; };
+		F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +63,14 @@
 		F26734DB1CB7B21500C5FF0F /* TsuiManaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsuiManaUITests.swift; sourceTree = "<group>"; };
 		F26734DD1CB7B21500C5FF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26734F11CB7CCEC00C5FF0F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		F26734F21CB7CCEC00C5FF0F /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F26734F91CB8392A00C5FF0F /* Evideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evideo.swift; sourceTree = "<group>"; };
 		F26734FB1CB83FE200C5FF0F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F26734FD1CB840C800C5FF0F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoTableViewController.swift; sourceTree = "<group>"; };
+		F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewCell.swift; sourceTree = "<group>"; };
+		F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewController.swift; sourceTree = "<group>"; };
+		F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +146,11 @@
 				F26734FD1CB840C800C5FF0F /* MenuViewController.swift */,
 				F26734F11CB7CCEC00C5FF0F /* TableViewController.swift */,
 				F26734F91CB8392A00C5FF0F /* Evideo.swift */,
+				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
+				F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */,
 				F26734FB1CB83FE200C5FF0F /* TabBarController.swift */,
-				F26734F21CB7CCEC00C5FF0F /* CategoryViewController.xib */,
+				F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */,
+				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
 				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
 				F26734BC1CB7B21400C5FF0F /* Main.storyboard */,
 				F26734C21CB7B21500C5FF0F /* Assets.xcassets */,
@@ -282,7 +291,6 @@
 				F26734C31CB7B21500C5FF0F /* Assets.xcassets in Resources */,
 				F26734BE1CB7B21400C5FF0F /* Main.storyboard in Resources */,
 				F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */,
-				F26734F41CB7CCEC00C5FF0F /* CategoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +364,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26734BB1CB7B21400C5FF0F /* ViewController.swift in Sources */,
+				F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */,
 				F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */,
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,
+				F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */,
 				F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */,
 				F26734FC1CB83FE200C5FF0F /* TabBarController.swift in Sources */,
+				F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */,
+				F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */,
 				F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */,
 				F26734F31CB7CCEC00C5FF0F /* TableViewController.swift in Sources */,
 			);

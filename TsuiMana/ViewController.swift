@@ -10,23 +10,25 @@ import UIKit
 import PageMenu
 
 class ViewController: UIViewController {
-        
-    var categories: [Dictionary<String, String>] =
+    
+    //let baseURL: String = "http://www.tsuimana.com/api/v1/evideos"
+    let baseURL: String = "http://127.0.0.1:3000/api/v1/evideos"
+    let categories: [Dictionary<String, String>] =
         [
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/top/rss",
-            "title": "all"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ruby/rss",
-            "title": "ruby"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ios/rss",
-            "title": "ios"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/infrastructure/rss",
-            "title": "infrastructure"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/top/rss",
-                "title": "all"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ruby/rss",
-                "title": "ruby"],
-            ["link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/ios/rss",
-                "title": "ios"],
+            ["link": "/",
+            "title": "TOP"],
+            ["link": "/category/letsplay",
+            "title": "ゲーム"],
+            ["link": "/category/funny",
+            "title": "おもしろ"],
+            ["link": "/category/girls",
+            "title": "ガールズ"],
+            ["link": "/category/benefit",
+            "title": "タメになる"],
+            ["link": "/category/music",
+            "title": "洋楽・映画"],
+            ["link": "/category/other",
+            "title": "その他"],
         ]
     
     
@@ -45,40 +47,15 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         
         
-        //let iconHome = UIBarButtonItem(image: UIImage(named: "menu.png"), style: .Plain, target: self, action: "onMenu:")
-        //self.navigationItem.leftBarButtonItem = iconHome
-        
-        
         var categoryControllerArray: [UIViewController] = []
-        
-        let allEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        allEvideos.title = "全て"
-        categoryControllerArray.append(allEvideos)
-        
-        let gameEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        gameEvideos.title = "ゲーム"
-        categoryControllerArray.append(gameEvideos)
-        
-        let funnyEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        funnyEvideos.title = "おもしろ"
-        categoryControllerArray.append(funnyEvideos)
-        
-        let girlsEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        girlsEvideos.title = "ガールズ"
-        categoryControllerArray.append(girlsEvideos)
-        
-        let benefitEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        benefitEvideos.title = "タメになる"
-        categoryControllerArray.append(benefitEvideos)
-        
-        let musicEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        musicEvideos.title = "洋楽・映画"
-        categoryControllerArray.append(musicEvideos)
-        
-        let otherEvideos: UIViewController = UIViewController(nibName: "CategoryViewController", bundle: nil)
-        otherEvideos.title = "その他"
-        categoryControllerArray.append(otherEvideos)
-
+        for category in categories {
+            let categoryController = EvideoTableViewController()
+            categoryController.url = baseURL + category["link"]!
+            categoryController.parent = self
+            categoryController.title = category["title"]!
+            categoryControllerArray.append(categoryController)
+        }
+   
         let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)),
             .SelectedMenuItemLabelColor(UIColor(red: 46.0/255.0, green: 125.0/255.0, blue: 50.0/255.0, alpha: 1.0)),
@@ -107,7 +84,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

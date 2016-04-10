@@ -19,6 +19,7 @@ class Evideo {
     var editable: Bool?
     var word: String?
     var view: Int?
+    var imageUrl: NSURL?
     
     let categoryDic = ["all": "TOP", "letsplay": "ゲーム", "funny": "おもしろ", "girls": "ガールズ", "benefit": "タメになる", "other": "その他"]
     
@@ -33,6 +34,7 @@ class Evideo {
         self.editable = editable
         self.word = word
         self.view = view
+        self.imageUrl =  NSURL(string: "http://i.ytimg.com/vi/\(videoId)/mqdefault.jpg")
     }
     
     func category_name() -> String {
