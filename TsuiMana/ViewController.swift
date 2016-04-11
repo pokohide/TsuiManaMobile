@@ -8,11 +8,12 @@
 
 import UIKit
 import PageMenu
+import Alamofire
 
 class ViewController: UIViewController {
     
     //let baseURL: String = "http://www.tsuimana.com/api/v1/evideos"
-    let baseURL: String = "http://127.0.0.1:3000/api/v1/evideos"
+    let baseURL: String = "http://192.168.11.4:3000/api/v1/evideos"
     let categories: [Dictionary<String, String>] =
         [
             ["link": "/",
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
         for category in categories {
             let categoryController = EvideoTableViewController()
             categoryController.url = baseURL + category["link"]!
-            categoryController.parent = self
+            //categoryController.parent = self
             categoryController.title = category["title"]!
             categoryControllerArray.append(categoryController)
         }
@@ -68,13 +69,11 @@ class ViewController: UIViewController {
             .MenuItemWidth(80.0),
             .CenterMenuItems(true)
         ]
-        
-        // Initialize page menu with controller array, frame, and optional parameters
+
         pageMenu = CAPSPageMenu(viewControllers: categoryControllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
-        
         pageMenu!.didMoveToParentViewController(self)
     }
     

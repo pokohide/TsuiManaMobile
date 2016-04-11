@@ -17,38 +17,6 @@
             endingLineNumber = "12"
             landmarkName = "TabBarController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.TabBarController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TsuiMana.TabBarController"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/TabBarController.swift"
-                  timestampString = "482005345.538227"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "69">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.TabBarController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TsuiMana.TabBarController&gt;"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/TabBarController.swift"
-                  timestampString = "482005345.538411"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,75 +58,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TsuiMana/EvideoTableViewController.swift"
-            timestampString = "482005125.228042"
+            timestampString = "482092321.674632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "EvideoTableViewController"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsuiMana/EvideoViewCell.swift"
+            timestampString = "482092596.837669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "EvideoViewCell"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.EvideoTableViewController.evideos.getter : Swift.Array&lt;SwiftyJSON.JSON&gt;"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/EvideoTableViewController.swift"
-                  timestampString = "482005345.542075"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.EvideoTableViewController.evideos.setter : Swift.Array&lt;SwiftyJSON.JSON&gt;"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/EvideoTableViewController.swift"
-                  timestampString = "482005345.542236"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.EvideoTableViewController.init (style : __C.UITableViewStyle) -&gt; TsuiMana.EvideoTableViewController"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/EvideoTableViewController.swift"
-                  timestampString = "482005345.54238"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "95">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TsuiMana.EvideoTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TsuiMana.EvideoTableViewController&gt;"
-                  moduleName = "TsuiMana"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sakaihidenobu/Desktop/Swift/TsuiMana/TsuiMana/EvideoTableViewController.swift"
-                  timestampString = "482005345.542633"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

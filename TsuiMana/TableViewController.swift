@@ -12,8 +12,16 @@ import SwiftyJSON
 
 class TableViewController: UIViewController {
     
+    
+    //let parse = parseFeed()
+    var url: String = String()
+    var evideos: [JSON] = []
+    var parent: UIViewController  = UIViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //SVProgressHUD.show()
+        
         // Do any additional setup after loading the view.
     }
 

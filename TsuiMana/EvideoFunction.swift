@@ -15,7 +15,7 @@ import SwiftyJSON
 class EvideoFunction {
     
     // APIを叩いて帰ってきたevideo一覧を処理する
-    func getEvideos(url: String, completion:(([JSON]?, NSError?) -> Void)) {
+    func getEvideos(url: String, completion:(([Evideo]?, NSError?) -> Void)) {
         let url = NSURL(string: url)
         
         Alamofire.request(.GET, url!, parameters: nil, encoding: .JSON)

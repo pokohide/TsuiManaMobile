@@ -7,61 +7,78 @@
 //
 
 import UIKit
+import Alamofire
 import SwiftyJSON
 
-class EvideoTableViewController: UITableViewController {
+class EvideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    @IBOutlet weak var tableView: UITableView!
     let eFunction = EvideoFunction()
     var url: String = String()
-    var evideos: [JSON] = []
-    var parent: UIViewController  = UIViewController()
+    var evideos: [Evideo] = []
+    //var parent: UIViewController = UIViewController()
+    var is_loading: Bool = true
+    var has_next: Bool = true
+    var current_page: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // ローディング画面
         // SVProgressHUD.show()
+        fetchData(true)
         
-        let nib: UINib = UINib(nibName: "EvideoViewCell", bundle: nil)
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        //let nib: UINib = UINib(nibName: "EvideoViewCell", bundle: nil)
+        //self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
         
-        eFunction.getEvideos(self.url, completion: {(data, erorr) in
-            self.evideos = data!
-            self.tableView.reloadData()
+        //eFunction.getEvideos(self.url, completion: {(data, erorr) in
+            //self.evideos = data!
+            //self.tableView.reloadData()
             // ローディンフ画面消去
             // SVProgressHUD.dismiss()
             
-        })
+        //})
+        
+        fetchData(true)
 
         //self.tableView.addPullTorRefresh({ [weak self] in
         //    self?.tableView.reloadData()
         //    self?.tableView.stopPullToRefresh()
         //)}
         
-
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        if( maxOffset - offset) <= 0 {
+            fetchData(false)
+        }
     }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.evideos.count
-        return 10
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EvideoViewCell
-        
-        //cell.title.text = self.evideos[indexPath.row]["title"].string
-        cell.title.text = "aaa"
-        
+        cell.evideo = evideos[indexPath.row]
         return cell
     }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.evideos.count ?? 10
+        //return 10
+    }
+        
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         //return 高さ
-        return 100
+        return 200
+    }
+        
+    // クリックしたら
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //let cell = tableView.cellForRowAtIndexPath(indexPath) as! ClubListViewCell
+        //self.performSegueWithIdentifier("showClub", sender: cell)
+        print(indexPath)
     }
     
     func dispatch_async_main(block: () -> ()) {
@@ -70,6 +87,59 @@ class EvideoTableViewController: UITableViewController {
     
     func dispatch_async_global(block: () -> ()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // 動画をAPI経由で取得する
+    func fetchData(initialize: Bool) {
+        if self.is_loading && (initialize || has_next) {
+            self.is_loading = true
+            if initialize {
+                self.current_page = 1
+            }
+            let URL = NSURL(string: self.url + "/?page=/(current_page++)")
+            
+            // ここでAUTH_TOKENを設定している
+            //var mutableURLRequest = NSMutableURLRequest(URL: URL!)
+            //mutableURLRequest.HTTPMethod = "GET"
+            //mutableURLRequest.setValue(app.AUTH_TOKEN, forHTTPHeaderField: "Authorization")
+            //var manager = Manager.sharedInstance
+            //var request = manager.request(mutableURLRequest)
+            
+            Alamofire.request(.GET, URL!, parameters: nil, encoding: .JSON)
+                .responseJSON{ response in
+                    
+                    switch response.result {
+                    case .Success(let value): // 通信成功時
+                        let json = JSON(value)  // 正しくはSwiftyJSON.JSON
+                        for(_, data) in json["response"]["evideos"] {
+                            var evideo = Evideo(
+                                id: data["id"].int!,
+                                title: data["title"].string!,
+                                videoId: data["youtube"].string!,
+                                playtime: data["playtime"].int!,
+                                level: data["level"].int!,
+                                category: data["category"].string!,
+                                instant: data["instant"].bool!,
+                                editable: data["editable"].bool!,
+                                word: data["word"].string!,
+                                view: data["view"].int!)
+                            // SwiftyJSON2の文法で int! → intValue. string! → stringValueにするらしい
+                            self.evideos.append(evideo)
+                        }
+                        self.has_next = json["response"]["paginator"]["has_next"].bool!
+                        self.is_loading = false
+                        self.tableView.reloadData()
+                        
+                        break
+                    default:
+                        break
+                    }
+            }
+        }
     }
     
 }
