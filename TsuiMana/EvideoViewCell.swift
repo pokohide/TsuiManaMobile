@@ -25,6 +25,7 @@ class EvideoViewCell: UITableViewCell {
             //    let image = UIImage(data: data!)
             //    self.thumbnail.image = image
             //}
+            print(self.evideo)
             let url: NSURL = (self.evideo?.imageUrl!)!
             let imageData: NSData
             do {
@@ -52,18 +53,21 @@ class EvideoViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(evideo: Evideo) {
-
-        // youtubeのサムネイルを非同期でロード
-        let imageRequest = NSURLRequest(URL: evideo.imageUrl!)
-        
-        NSURLConnection.sendAsynchronousRequest(imageRequest, queue:NSOperationQueue.mainQueue()) {
-            (res, data, err) in
-            let image = UIImage(data: data!)
-            self.thumbnail.image = image
+    func setCell() {
+        print(evideo)
+        let url: NSURL = (self.evideo!.imageUrl!)
+        let imageData: NSData
+        do {
+            imageData = try NSData(contentsOfURL: url,options: NSDataReadingOptions.DataReadingMappedIfSafe)
+            self.thumbnail.image = UIImage(data: imageData)
+            
+        } catch {
+            print("Error: can't create image.")
+            
         }
-        self.title.text = evideo.title
-        self.word.text = evideo.word
+        
+        self.title.text = self.evideo!.title
+        self.word.text = self.evideo!.word
     }
 
 }

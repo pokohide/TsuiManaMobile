@@ -12,8 +12,7 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    //let baseURL: String = "http://www.tsuimana.com/api/v1/evideos"
-    let baseURL: String = "http://192.168.11.4:3000/api/v1/evideos"
+    let baseURL: String = "http://www.tsuimana.com/api/evideos"
     let categories: [Dictionary<String, String>] =
         [
             ["link": "/",

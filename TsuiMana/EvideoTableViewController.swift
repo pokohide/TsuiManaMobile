@@ -27,7 +27,12 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         // ローディング画面
         // SVProgressHUD.show()
-        fetchData(true)
+        
+        // ローディング画面表示
+        fetchData(true, completion: {
+            print(self.evideos)
+            // ローディング画面非表示に
+        })
         
         //let nib: UINib = UINib(nibName: "EvideoViewCell", bundle: nil)
         //self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
@@ -39,8 +44,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
             // SVProgressHUD.dismiss()
             
         //})
-        
-        fetchData(true)
 
         //self.tableView.addPullTorRefresh({ [weak self] in
         //    self?.tableView.reloadData()
@@ -53,20 +56,20 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         let offset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
         if( maxOffset - offset) <= 0 {
-            fetchData(false)
+            fetchData(false, completion: { print("ok") })
         }
     }
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EvideoViewCell
         cell.evideo = evideos[indexPath.row]
+        cell.setCell()
         return cell
     }
         
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.evideos.count ?? 10
-        //return 10
+        return self.evideos.count ?? 0
     }
         
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -94,7 +97,7 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     // 動画をAPI経由で取得する
-    func fetchData(initialize: Bool) {
+    func fetchData(initialize: Bool, completion: ( () -> Void)) {
         if self.is_loading && (initialize || has_next) {
             self.is_loading = true
             if initialize {
@@ -111,16 +114,16 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
             
             Alamofire.request(.GET, URL!, parameters: nil, encoding: .JSON)
                 .responseJSON{ response in
-                    
                     switch response.result {
                     case .Success(let value): // 通信成功時
                         let json = JSON(value)  // 正しくはSwiftyJSON.JSON
                         for(_, data) in json["response"]["evideos"] {
-                            var evideo = Evideo(
+                            let evideo = Evideo(
                                 id: data["id"].int!,
                                 title: data["title"].string!,
                                 videoId: data["youtube"].string!,
-                                playtime: data["playtime"].int!,
+                                //playtime: data["playtime"].int!,
+                                playtime: 0,
                                 level: data["level"].int!,
                                 category: data["category"].string!,
                                 instant: data["instant"].bool!,
@@ -132,13 +135,15 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
                         }
                         self.has_next = json["response"]["paginator"]["has_next"].bool!
                         self.is_loading = false
-                        self.tableView.reloadData()
-                        
+                        //self.tableView.reloadData()
+                        print("\(self.url)を取得")
+                        print(self.evideos)
                         break
                     default:
                         break
                     }
             }
+            completion()
         }
     }
     
