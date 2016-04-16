@@ -18,9 +18,8 @@ class EvideoViewCell: UITableViewCell {
     var evideo: Evideo? {
         didSet {
             if let url = evideo?.imageUrl {
-                let imageData: NSData
                 do {
-                    imageData = try NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                    let imageData = try NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingMappedIfSafe)
                     self.thumbnail.image = UIImage(data: imageData)
                 } catch {
                     print("Error: can't create image.")
