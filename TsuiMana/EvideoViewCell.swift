@@ -17,6 +17,7 @@ class EvideoViewCell: UITableViewCell {
     
     var evideo: Evideo? {
         didSet {
+            // TODO: SDWebImageを使う
             if let url = evideo?.imageUrl {
                 do {
                     let imageData = try NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingMappedIfSafe)
