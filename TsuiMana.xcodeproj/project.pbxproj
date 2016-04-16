@@ -95,6 +95,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ADBAD6D1CC2324E003BF58E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F26734F91CB8392A00C5FF0F /* Evideo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5ADBAD6E1CC23257003BF58E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		5ADBAD6F1CC2325C003BF58E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F26734FD1CB840C800C5FF0F /* MenuViewController.swift */,
+				F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */,
+				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
+				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5ADBAD701CC23265003BF58E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5ADBAD711CC232AA003BF58E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F26734BC1CB7B21400C5FF0F /* Main.storyboard */,
+				F26734C21CB7B21500C5FF0F /* Assets.xcassets */,
+				F26734C41CB7B21500C5FF0F /* LaunchScreen.storyboard */,
+				F26734C71CB7B21500C5FF0F /* Info.plist */,
+				F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		639F8C59036BD29D19FBC618 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,18 +186,11 @@
 			isa = PBXGroup;
 			children = (
 				F26734B81CB7B21400C5FF0F /* AppDelegate.swift */,
-				F26734FD1CB840C800C5FF0F /* MenuViewController.swift */,
-				F26734F91CB8392A00C5FF0F /* Evideo.swift */,
-				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
-				F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */,
-				F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */,
-				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
-				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
-				F26734BC1CB7B21400C5FF0F /* Main.storyboard */,
-				F26734C21CB7B21500C5FF0F /* Assets.xcassets */,
-				F26734C41CB7B21500C5FF0F /* LaunchScreen.storyboard */,
-				F26734C71CB7B21500C5FF0F /* Info.plist */,
-				F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */,
+				5ADBAD6E1CC23257003BF58E /* Utilities */,
+				5ADBAD6D1CC2324E003BF58E /* Models */,
+				5ADBAD6F1CC2325C003BF58E /* ViewControllers */,
+				5ADBAD701CC23265003BF58E /* Views */,
+				5ADBAD711CC232AA003BF58E /* Resources */,
 			);
 			path = TsuiMana;
 			sourceTree = "<group>";
