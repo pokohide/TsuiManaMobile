@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // スクロールメニュー
-        self.title = "ついまな"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
