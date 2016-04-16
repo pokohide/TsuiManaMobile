@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,19 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // スライドメニュー用の追加分
-//        let tabbarController: TabBarController = TabBarController()
-//        let menuController = MenuViewController()
-//        
-//        let slideMenuController = SlideMenuController(mainViewController: tabbarController, leftMenuViewController: menuController)
-//        
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        self.window?.rootViewController = slideMenuController
-//        self.window?.makeKeyAndVisible()
-        
-        //
-        
         return true
     }
 
