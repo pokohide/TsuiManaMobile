@@ -10,10 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class EvideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EvideoTableViewController: UITableViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Properties
     var evideos = [Evideo]()
@@ -22,42 +21,41 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     // MARK: - View life cycle
     override func viewDidLoad() {
-        fetchData(true, completion: {
-            print(self.evideos)
-        })
+        tableView.registerClass(EvideoTableViewCell.self, forCellReuseIdentifier: "Cell")
+        fetchData(true)
     }
 
     // MARK: - Publics
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        if( maxOffset - offset) <= 0 {
-            fetchData(false, completion: { print("ok") })
+        if (maxOffset - offset) <= 0 {
+            fetchData(false)
         }
     }
-        
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EvideoViewCell
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EvideoTableViewCell
         cell.evideo = evideos[indexPath.row]
         return cell
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.evideos.count ?? 0
     }
-        
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 200
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //let cell = tableView.cellForRowAtIndexPath(indexPath) as! ClubListViewCell
         //self.performSegueWithIdentifier("showClub", sender: cell)
         print(indexPath)
     }
 
     // MARK: - Privates
-    private func fetchData(initialize: Bool, completion: ( () -> Void)) {
+    private func fetchData(initialize: Bool) {
         if !is_loading {
             self.is_loading = true
 
@@ -69,7 +67,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
             WebAPIClient().getAllEvideos(current_page) { result in
                 switch result {
                 case .Success(let evideos):
-                    print(evideos)
                     evideos.forEach { self.evideos.append($0) }
                     self.tableView.reloadData()
                     self.current_page += 1

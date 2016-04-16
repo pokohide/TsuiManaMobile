@@ -47,7 +47,7 @@ class EvideoViewController: UIViewController {
         var categoryControllerArray: [UIViewController] = []
         for category in categories {
             let categoryController = EvideoTableViewController()
-            //categoryController.parent = self
+//            categoryController.parent = self
             categoryController.title = category["title"]!
             categoryControllerArray.append(categoryController)
         }
