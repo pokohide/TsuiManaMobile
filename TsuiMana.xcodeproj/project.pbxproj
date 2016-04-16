@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBAD811CC23859003BF58E /* WebAPIClient.swift */; };
 		774ACFEF90C46AF914FDDC75 /* Pods_TsuiMana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389797425E99B6734707194 /* Pods_TsuiMana.framework */; };
 		F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734B81CB7B21400C5FF0F /* AppDelegate.swift */; };
 		F26734BB1CB7B21400C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3389797425E99B6734707194 /* Pods_TsuiMana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsuiMana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADBAD811CC23859003BF58E /* WebAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIClient.swift; sourceTree = "<group>"; };
 		6F8A4D74B64CA1215CA1FDC3 /* Pods-TsuiMana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.release.xcconfig"; sourceTree = "<group>"; };
 		854579708B9A5B29236B7C52 /* Pods-TsuiMana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.debug.xcconfig"; sourceTree = "<group>"; };
 		F26734B51CB7B21400C5FF0F /* TsuiMana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TsuiMana.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
+				5ADBAD811CC23859003BF58E /* WebAPIClient.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */,
 				F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */,
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,
+				5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */,
 				F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */,
 				F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */,
 				F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */,
