@@ -21,13 +21,13 @@ class EvideoViewCell: UITableViewCell {
         if let url = evideo?.imageUrl {
             do {
                 let imageData = try NSData(contentsOfURL: url, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                self.thumbnail.image = UIImage(data: imageData)
+                thumbnail.image = UIImage(data: imageData)
             } catch {
                 print("Error: can't create image.")
             }
         }
 
-        self.title.text = self.evideo?.title
-        self.word.text = self.evideo?.word
+        title.text = evideo?.title
+        word.text = evideo?.word
     }
 }
