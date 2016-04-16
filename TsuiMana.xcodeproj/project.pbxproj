@@ -18,7 +18,6 @@
 		F26734DC1CB7B21500C5FF0F /* TsuiManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734DB1CB7B21500C5FF0F /* TsuiManaUITests.swift */; };
 		F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */; };
 		F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734F91CB8392A00C5FF0F /* Evideo.swift */; };
-		F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734FD1CB840C800C5FF0F /* MenuViewController.swift */; };
 		F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */; };
 		F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */; };
 		F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */; };
@@ -62,7 +61,6 @@
 		F26734DD1CB7B21500C5FF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F26734F91CB8392A00C5FF0F /* Evideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evideo.swift; sourceTree = "<group>"; };
-		F26734FD1CB840C800C5FF0F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoTableViewController.swift; sourceTree = "<group>"; };
 		F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewCell.swift; sourceTree = "<group>"; };
 		F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		5ADBAD6F1CC2325C003BF58E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F26734FD1CB840C800C5FF0F /* MenuViewController.swift */,
 				F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */,
 				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
 				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
@@ -402,7 +399,6 @@
 				F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */,
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,
 				F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */,
-				F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */,
 				F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */,
 				F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */,
 				F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */,
