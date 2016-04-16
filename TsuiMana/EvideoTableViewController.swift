@@ -58,7 +58,7 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         print(indexPath)
     }
 
-    func fetchData(initialize: Bool, completion: ( () -> Void)) {
+    private func fetchData(initialize: Bool, completion: ( () -> Void)) {
         if self.is_loading && (initialize || has_next) {
             self.is_loading = true
             if initialize {
