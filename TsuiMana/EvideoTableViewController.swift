@@ -19,9 +19,9 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     let eFunction = EvideoFunction()
     var url = ""
     var evideos: [Evideo] = []
-    var is_loading: Bool = true
-    var has_next: Bool = true
-    var current_page: Int = 1
+    var is_loading = true
+    var has_next = true
+    var current_page = 1
 
     // MARK: - View life cycle
     override func viewDidLoad() {
