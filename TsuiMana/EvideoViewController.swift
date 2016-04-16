@@ -35,8 +35,6 @@ class EvideoViewController: UIViewController {
 
     // MARK: - View life cycle
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         // スクロールメニュー
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()

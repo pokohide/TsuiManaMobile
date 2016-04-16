@@ -25,8 +25,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     // MARK: - View life cycle
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         fetchData(true, completion: {
             print(self.evideos)
         })
