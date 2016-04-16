@@ -10,7 +10,7 @@ import UIKit
 import PageMenu
 import Alamofire
 
-class ViewController: UIViewController {
+class EvideoViewController: UIViewController {
 
     // MARK: - Properties
     let baseURL: String = "http://www.tsuimana.com/api/evideos"

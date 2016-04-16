@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		774ACFEF90C46AF914FDDC75 /* Pods_TsuiMana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389797425E99B6734707194 /* Pods_TsuiMana.framework */; };
 		F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734B81CB7B21400C5FF0F /* AppDelegate.swift */; };
-		F26734BB1CB7B21400C5FF0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734BA1CB7B21400C5FF0F /* ViewController.swift */; };
+		F26734BB1CB7B21400C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */; };
 		F26734BE1CB7B21400C5FF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26734BC1CB7B21400C5FF0F /* Main.storyboard */; };
 		F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */; };
 		F26734C31CB7B21500C5FF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26734C21CB7B21500C5FF0F /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 		854579708B9A5B29236B7C52 /* Pods-TsuiMana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.debug.xcconfig"; sourceTree = "<group>"; };
 		F26734B51CB7B21400C5FF0F /* TsuiMana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TsuiMana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26734B81CB7B21400C5FF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F26734BA1CB7B21400C5FF0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvideoViewController.swift; sourceTree = "<group>"; };
 		F26734BD1CB7B21400C5FF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F26734C01CB7B21500C5FF0F /* TsuiMana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TsuiMana.xcdatamodel; sourceTree = "<group>"; };
 		F26734C21CB7B21500C5FF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
-				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
+				F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26734BB1CB7B21400C5FF0F /* ViewController.swift in Sources */,
+				F26734BB1CB7B21400C5FF0F /* EvideoViewController.swift in Sources */,
 				F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */,
 				F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */,
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,

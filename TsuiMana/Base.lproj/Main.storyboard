@@ -10,7 +10,7 @@
         <!--ついまな-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TsuiMana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EvideoViewController" customModule="TsuiMana" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="ついまな" id="e6t-Hk-knS"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
