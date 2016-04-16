@@ -63,7 +63,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EvideoViewCell
         cell.evideo = evideos[indexPath.row]
-        cell.setCell()
         return cell
     }
         

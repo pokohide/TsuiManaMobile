@@ -10,7 +10,6 @@ import UIKit
 
 class EvideoViewCell: UITableViewCell {
 
-
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var word: UILabel!
@@ -31,22 +30,21 @@ class EvideoViewCell: UITableViewCell {
             self.word.text = self.evideo?.word
         }
     }
-    
-    func setCell() {
-        print(evideo)
+
+
+    override func awakeFromNib() {
         let url: NSURL = (self.evideo!.imageUrl!)
         let imageData: NSData
         do {
             imageData = try NSData(contentsOfURL: url,options: NSDataReadingOptions.DataReadingMappedIfSafe)
             self.thumbnail.image = UIImage(data: imageData)
-            
+
         } catch {
             print("Error: can't create image.")
-            
+
         }
-        
+
         self.title.text = self.evideo!.title
         self.word.text = self.evideo!.word
     }
-
 }
