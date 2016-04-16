@@ -61,11 +61,7 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         //self.performSegueWithIdentifier("showClub", sender: cell)
         print(indexPath)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     // 動画をAPI経由で取得する
     func fetchData(initialize: Bool, completion: ( () -> Void)) {
         if self.is_loading && (initialize || has_next) {
