@@ -8,20 +8,29 @@
 
 import Foundation
 
+enum Category: String {
+    case All = "TOP"
+    case Letsplay = "ゲーム"
+    case Funny = "おもしろい"
+    case Girls = "ガールズ"
+    case Benefit = "タメになる"
+    case Other = "その他"
+
+    static let values = [All, Letsplay, Funny, Girls, Benefit, Other].map { $0.rawValue }
+}
+
 class Evideo {
     var id: Int?
     var title: String?
     var videoId: String?
     var playtime: Int?
     var level: Int?
-    var category: String?
+    var category: Category?
     var instant: Bool?
     var editable: Bool?
     var word: String?
     var view: Int?
     var imageUrl: NSURL?
-    
-    let categoryDic = ["all": "TOP", "letsplay": "ゲーム", "funny": "おもしろ", "girls": "ガールズ", "benefit": "タメになる", "other": "その他"]
     
     init(id: Int, title: String, videoId: String, playtime: Int, level: Int, category: String, instant: Bool, editable: Bool, word: String, view: Int) {
         self.id = id
@@ -29,15 +38,11 @@ class Evideo {
         self.videoId = videoId
         self.playtime = playtime
         self.level = level
-        self.category = category
+        self.category = Category(rawValue: category)
         self.instant = instant
         self.editable = editable
         self.word = word
         self.view = view
         self.imageUrl =  NSURL(string: "http://i.ytimg.com/vi/\(videoId)/mqdefault.jpg")
-    }
-    
-    func category_name() -> String {
-        return categoryDic[category!]!
     }
 }
