@@ -75,10 +75,6 @@ class ViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
         pageMenu!.didMoveToParentViewController(self)
     }
-    
-    func onMenu(sender: UIButton) {
-        self.slideMenuController()?.openLeft()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
