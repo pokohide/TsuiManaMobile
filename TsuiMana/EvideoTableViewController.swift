@@ -11,16 +11,19 @@ import Alamofire
 import SwiftyJSON
 
 class EvideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: - Properties
     let eFunction = EvideoFunction()
     var url: String = String()
     var evideos: [Evideo] = []
     var is_loading: Bool = true
     var has_next: Bool = true
     var current_page: Int = 1
-    
+
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +31,8 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
             print(self.evideos)
         })
     }
-        
+
+    // MARK: - Publics
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height
@@ -58,6 +62,7 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         print(indexPath)
     }
 
+    // MARK: - Privates
     private func fetchData(initialize: Bool, completion: ( () -> Void)) {
         if self.is_loading && (initialize || has_next) {
             self.is_loading = true
