@@ -13,11 +13,12 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TsuiMana" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="e6t-Hk-knS"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.5" y="399.5"/>
+            <point key="canvasLocation" x="1229" y="400"/>
         </scene>
         <!--Evideo Table View Controller-->
         <scene sceneID="jVh-9e-4wf">
@@ -28,11 +29,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Zjr-mh-nER"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rYl-zv-fWE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="axv-l9-1dK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="MyC-aW-74l" customClass="EvideoViewCell" customModule="TsuiMana" customModuleProvider="target">
@@ -88,14 +89,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="axv-l9-1dK" secondAttribute="trailing" id="ywd-bP-kSg"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="tableView" destination="axv-l9-1dK" id="EZK-Sy-PV1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaQ-hn-r0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606.5" y="399.5"/>
+            <point key="canvasLocation" x="1877" y="400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="APw-I6-MUw">
