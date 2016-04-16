@@ -17,15 +17,6 @@ class EvideoViewCell: UITableViewCell {
     
     var evideo: Evideo? {
         didSet {
-            // youtubeのサムネイルを非同期でロード
-            //let imageRequest = NSURLRequest(URL: (self.evideo?.imageUrl)!)
-            
-            //NSURLConnection.sendAsynchronousRequest(imageRequest, queue:NSOperationQueue.mainQueue()) {
-            //    (res, data, err) in
-            //    let image = UIImage(data: data!)
-            //    self.thumbnail.image = image
-            //}
-            print(self.evideo)
             let url: NSURL = (self.evideo?.imageUrl!)!
             let imageData: NSData
             do {
