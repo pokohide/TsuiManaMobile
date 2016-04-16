@@ -23,11 +23,9 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // ローディング画面表示
+
         fetchData(true, completion: {
             print(self.evideos)
-            // ローディング画面非表示に
         })
     }
         
@@ -51,18 +49,15 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
         
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        //return 高さ
         return 200
     }
-        
-    // クリックしたら
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //let cell = tableView.cellForRowAtIndexPath(indexPath) as! ClubListViewCell
         //self.performSegueWithIdentifier("showClub", sender: cell)
         print(indexPath)
     }
 
-    // 動画をAPI経由で取得する
     func fetchData(initialize: Bool, completion: ( () -> Void)) {
         if self.is_loading && (initialize || has_next) {
             self.is_loading = true
