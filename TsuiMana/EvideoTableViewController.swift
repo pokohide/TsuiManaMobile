@@ -12,12 +12,11 @@ import SwiftyJSON
 
 class EvideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     @IBOutlet weak var tableView: UITableView!
+
     let eFunction = EvideoFunction()
     var url: String = String()
     var evideos: [Evideo] = []
-    //var parent: UIViewController = UIViewController()
     var is_loading: Bool = true
     var has_next: Bool = true
     var current_page: Int = 1
@@ -25,31 +24,11 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ローディング画面
-        // SVProgressHUD.show()
-        
         // ローディング画面表示
         fetchData(true, completion: {
             print(self.evideos)
             // ローディング画面非表示に
         })
-        
-        //let nib: UINib = UINib(nibName: "EvideoViewCell", bundle: nil)
-        //self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
-        
-        //eFunction.getEvideos(self.url, completion: {(data, erorr) in
-            //self.evideos = data!
-            //self.tableView.reloadData()
-            // ローディンフ画面消去
-            // SVProgressHUD.dismiss()
-            
-        //})
-
-        //self.tableView.addPullTorRefresh({ [weak self] in
-        //    self?.tableView.reloadData()
-        //    self?.tableView.stopPullToRefresh()
-        //)}
-        
     }
         
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -103,13 +82,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
                 self.current_page = 1
             }
             let URL = NSURL(string: self.url + "/?page=/(current_page++)")
-            
-            // ここでAUTH_TOKENを設定している
-            //var mutableURLRequest = NSMutableURLRequest(URL: URL!)
-            //mutableURLRequest.HTTPMethod = "GET"
-            //mutableURLRequest.setValue(app.AUTH_TOKEN, forHTTPHeaderField: "Authorization")
-            //var manager = Manager.sharedInstance
-            //var request = manager.request(mutableURLRequest)
             
             Alamofire.request(.GET, URL!, parameters: nil, encoding: .JSON)
                 .responseJSON{ response in
