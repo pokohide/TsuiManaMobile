@@ -75,10 +75,4 @@ class ViewController: UIViewController {
         pageMenu!.didMoveToParentViewController(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
 }
-
