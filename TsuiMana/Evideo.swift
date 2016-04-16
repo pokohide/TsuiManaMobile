@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum Category: String {
     case All = "TOP"
@@ -19,7 +20,7 @@ enum Category: String {
     static let values = [All, Letsplay, Funny, Girls, Benefit, Other].map { $0.rawValue }
 }
 
-class Evideo {
+struct Evideo {
 
     // MARK: - Properties
     var id: Int?
@@ -47,5 +48,20 @@ class Evideo {
         self.word = word
         self.view = view
         self.imageUrl =  NSURL(string: "http://i.ytimg.com/vi/\(videoId)/mqdefault.jpg")
+    }
+
+    init(json: JSON) {
+        self.init(
+            id: json["id"].intValue,
+            title: json["title"].stringValue,
+            videoId: json["youtube"].stringValue,
+            playtime: 0,
+            level: json["level"].intValue,
+            category: json["category"].stringValue,
+            instant: json["instant"].boolValue,
+            editable: json["editable"].boolValue,
+            word: json["word"].stringValue,
+            view: json["view"].intValue
+        )
     }
 }

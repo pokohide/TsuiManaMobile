@@ -47,7 +47,6 @@ class EvideoViewController: UIViewController {
         var categoryControllerArray: [UIViewController] = []
         for category in categories {
             let categoryController = EvideoTableViewController()
-            categoryController.url = baseURL + category["link"]!
             //categoryController.parent = self
             categoryController.title = category["title"]!
             categoryControllerArray.append(categoryController)

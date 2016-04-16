@@ -21,7 +21,6 @@
 		F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734F91CB8392A00C5FF0F /* Evideo.swift */; };
 		F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */; };
 		F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */; };
-		F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		F26734F91CB8392A00C5FF0F /* Evideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evideo.swift; sourceTree = "<group>"; };
 		F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoTableViewController.swift; sourceTree = "<group>"; };
 		F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewCell.swift; sourceTree = "<group>"; };
-		F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 		5ADBAD6E1CC23257003BF58E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
 				5ADBAD811CC23859003BF58E /* WebAPIClient.swift */,
 			);
 			name = Utilities;
@@ -400,7 +397,6 @@
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,
 				5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */,
 				F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */,
-				F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */,
 				F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

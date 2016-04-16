@@ -16,11 +16,8 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Properties
-    let eFunction = EvideoFunction()
-    var url = ""
     var evideos = [Evideo]()
-    var is_loading = true
-    var has_next = true
+    var is_loading = false
     var current_page = 1
 
     // MARK: - View life cycle
@@ -44,7 +41,6 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
         cell.evideo = evideos[indexPath.row]
         return cell
     }
-        
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.evideos.count ?? 0
@@ -62,45 +58,26 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     // MARK: - Privates
     private func fetchData(initialize: Bool, completion: ( () -> Void)) {
-        if self.is_loading && (initialize || has_next) {
+        if !is_loading {
             self.is_loading = true
+
             if initialize {
                 self.current_page = 1
+                self.evideos = [Evideo]()
             }
-            let URL = NSURL(string: self.url + "/?page=/(current_page++)")
-            
-            Alamofire.request(.GET, URL!, parameters: nil, encoding: .JSON)
-                .responseJSON{ response in
-                    switch response.result {
-                    case .Success(let value): // 通信成功時
-                        let json = JSON(value)  // 正しくはSwiftyJSON.JSON
-                        for(_, data) in json["response"]["evideos"] {
-                            let evideo = Evideo(
-                                id: data["id"].int!,
-                                title: data["title"].string!,
-                                videoId: data["youtube"].string!,
-                                //playtime: data["playtime"].int!,
-                                playtime: 0,
-                                level: data["level"].int!,
-                                category: data["category"].string!,
-                                instant: data["instant"].bool!,
-                                editable: data["editable"].bool!,
-                                word: data["word"].string!,
-                                view: data["view"].int!)
-                            // SwiftyJSON2の文法で int! → intValue. string! → stringValueにするらしい
-                            self.evideos.append(evideo)
-                        }
-                        self.has_next = json["response"]["paginator"]["has_next"].bool!
-                        self.is_loading = false
-                        //self.tableView.reloadData()
-                        print("\(self.url)を取得")
-                        print(self.evideos)
-                        break
-                    default:
-                        break
-                    }
+
+            WebAPIClient().getAllEvideos(current_page) { result in
+                switch result {
+                case .Success(let evideos):
+                    print(evideos)
+                    evideos.forEach { self.evideos.append($0) }
+                    self.tableView.reloadData()
+                    self.current_page += 1
+                case .Failure(let error):
+                    print(error)
+                }
+                self.is_loading = false
             }
-            completion()
         }
     }
     
