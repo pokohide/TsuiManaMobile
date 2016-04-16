@@ -20,6 +20,8 @@ enum Category: String {
 }
 
 class Evideo {
+
+    // MARK: - Properties
     var id: Int?
     var title: String?
     var videoId: String?
@@ -31,7 +33,8 @@ class Evideo {
     var word: String?
     var view: Int?
     var imageUrl: NSURL?
-    
+
+    // MARK: - Publics
     init(id: Int, title: String, videoId: String, playtime: Int, level: Int, category: String, instant: Bool, editable: Bool, word: String, view: Int) {
         self.id = id
         self.title = title

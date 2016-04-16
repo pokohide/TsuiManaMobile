@@ -10,12 +10,15 @@ import UIKit
 
 class EvideoViewCell: UITableViewCell {
 
+    // MARK: - Outlets
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var word: UILabel!
-    
+
+    // MARK: - Properties
     var evideo: Evideo?
 
+    // MARK: - View life cycle
     override func awakeFromNib() {
         // TODO: SDWebImageを使う
         if let url = evideo?.imageUrl {

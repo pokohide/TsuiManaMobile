@@ -11,7 +11,8 @@ import PageMenu
 import Alamofire
 
 class ViewController: UIViewController {
-    
+
+    // MARK: - Properties
     let baseURL: String = "http://www.tsuimana.com/api/evideos"
     let categories: [Dictionary<String, String>] =
         [
@@ -30,10 +31,9 @@ class ViewController: UIViewController {
             ["link": "/category/other",
             "title": "その他"],
         ]
-    
-    
     var pageMenu : CAPSPageMenu?
-    
+
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
