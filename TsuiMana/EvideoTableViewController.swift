@@ -18,7 +18,7 @@ class EvideoTableViewController: UIViewController, UITableViewDataSource, UITabl
     // MARK: - Properties
     let eFunction = EvideoFunction()
     var url = ""
-    var evideos: [Evideo] = []
+    var evideos = [Evideo]()
     var is_loading = true
     var has_next = true
     var current_page = 1
