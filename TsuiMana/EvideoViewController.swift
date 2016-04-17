@@ -13,43 +13,22 @@ import Alamofire
 class EvideoViewController: UIViewController {
 
     // MARK: - Properties
-    let baseURL: String = "http://www.tsuimana.com/api/evideos"
-    let categories: [Dictionary<String, String>] =
-        [
-            ["link": "/",
-            "title": "TOP"],
-            ["link": "/category/letsplay",
-            "title": "ゲーム"],
-            ["link": "/category/funny",
-            "title": "おもしろ"],
-            ["link": "/category/girls",
-            "title": "ガールズ"],
-            ["link": "/category/benefit",
-            "title": "タメになる"],
-            ["link": "/category/music",
-            "title": "洋楽・映画"],
-            ["link": "/category/other",
-            "title": "その他"],
-        ]
     var pageMenu : CAPSPageMenu?
 
     // MARK: - View life cycle
     override func viewDidLoad() {
-        // スクロールメニュー
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        
-        
-        var categoryControllerArray: [UIViewController] = []
-        for category in categories {
-            let categoryController = EvideoTableViewController()
-//            categoryController.parent = self
-            categoryController.title = category["title"]!
-            categoryControllerArray.append(categoryController)
+
+        var controllers = [UIViewController]()
+        Category.values.forEach {
+            let controller = EvideoTableViewController()
+            controller.title = $0
+            controllers.append(controller)
         }
    
         let parameters: [CAPSPageMenuOption] = [
@@ -65,11 +44,12 @@ class EvideoViewController: UIViewController {
             .CenterMenuItems(true)
         ]
 
-        pageMenu = CAPSPageMenu(viewControllers: categoryControllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-        
-        self.addChildViewController(pageMenu!)
-        self.view.addSubview(pageMenu!.view)
-        pageMenu!.didMoveToParentViewController(self)
+        pageMenu = CAPSPageMenu(viewControllers: controllers, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+
+        guard let pageMenu = pageMenu else { return }
+        addChildViewController(pageMenu)
+        view.addSubview(pageMenu.view)
+        pageMenu.didMoveToParentViewController(self)
     }
 
 }

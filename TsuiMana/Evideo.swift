@@ -15,9 +15,10 @@ enum Category: String {
     case Funny = "おもしろい"
     case Girls = "ガールズ"
     case Benefit = "タメになる"
+    case Music = "洋楽・映画"
     case Other = "その他"
 
-    static let values = [All, Letsplay, Funny, Girls, Benefit, Other].map { $0.rawValue }
+    static let values = [All, Letsplay, Funny, Girls, Benefit, Music, Other].map { $0.rawValue }
 }
 
 struct Evideo {
