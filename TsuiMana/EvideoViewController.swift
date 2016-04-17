@@ -13,7 +13,7 @@ import Alamofire
 class EvideoViewController: UIViewController {
 
     // MARK: - Properties
-    var pageMenu : CAPSPageMenu?
+    private var pageMenu : CAPSPageMenu?
 
     // MARK: - View life cycle
     override func viewDidLoad() {

@@ -13,7 +13,7 @@ import SwiftyJSON
 class WebAPIClient {
 
     // MARK: - Properties
-    let domain = "http://www.tsuimana.com/api"
+    private let domain = "http://www.tsuimana.com/api"
 
     func getAllEvideos(page: Int = 1, category: Category, callback: Result<[Evideo], NSError> -> Void) {
         let path = category == .All ? "evideos" : "evideos/category/\(category.path)"

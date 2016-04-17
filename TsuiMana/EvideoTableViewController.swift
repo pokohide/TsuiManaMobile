@@ -21,8 +21,8 @@ class EvideoTableViewController: UITableViewController {
         }
     }
     var evideos = [Evideo]()
-    var isLoading = false
-    var page = 1
+    private var isLoading = false
+    private var page = 1
 
     // MARK: - View life cycle
     override func viewDidLoad() {
