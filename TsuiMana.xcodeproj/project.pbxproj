@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A65D4101CC30F5C006CF6FA /* EvideoTableVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */; };
+		5A65D4121CC30F88006CF6FA /* EvideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */; };
 		5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBAD811CC23859003BF58E /* WebAPIClient.swift */; };
 		774ACFEF90C46AF914FDDC75 /* Pods_TsuiMana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389797425E99B6734707194 /* Pods_TsuiMana.framework */; };
 		F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734B81CB7B21400C5FF0F /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		3389797425E99B6734707194 /* Pods_TsuiMana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsuiMana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvideoTableVIew.xib; sourceTree = "<group>"; };
+		5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvideoTableViewCell.xib; sourceTree = "<group>"; };
 		5ADBAD811CC23859003BF58E /* WebAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIClient.swift; sourceTree = "<group>"; };
 		6F8A4D74B64CA1215CA1FDC3 /* Pods-TsuiMana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.release.xcconfig"; sourceTree = "<group>"; };
 		854579708B9A5B29236B7C52 /* Pods-TsuiMana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				F26735071CBA62DC00C5FF0F /* EvideoTableViewCell.swift */,
+				5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */,
+				5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,7 +324,9 @@
 				F26734C61CB7B21500C5FF0F /* LaunchScreen.storyboard in Resources */,
 				F26734C31CB7B21500C5FF0F /* Assets.xcassets in Resources */,
 				F26734BE1CB7B21400C5FF0F /* Main.storyboard in Resources */,
+				5A65D4121CC30F88006CF6FA /* EvideoTableViewCell.xib in Resources */,
 				F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */,
+				5A65D4101CC30F5C006CF6FA /* EvideoTableVIew.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

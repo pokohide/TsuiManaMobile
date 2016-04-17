@@ -21,7 +21,7 @@ class EvideoTableViewController: UITableViewController {
 
     // MARK: - View life cycle
     override func viewDidLoad() {
-        tableView.registerClass(EvideoTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.registerNib(UINib(nibName: "EvideoTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         fetchData(true)
     }
 
@@ -45,7 +45,7 @@ class EvideoTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200
+        return 120
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

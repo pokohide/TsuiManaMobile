@@ -18,34 +18,6 @@
             </objects>
             <point key="canvasLocation" x="1229" y="400"/>
         </scene>
-        <!--Evideo Table View Controller-->
-        <scene sceneID="duN-tb-fQt">
-            <objects>
-                <tableViewController id="1q5-aP-e48" customClass="EvideoTableViewController" customModule="TsuiMana" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dqM-qG-cV2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7OA-hY-AEp" customClass="EvideoTableViewCell" customModule="TsuiMana" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7OA-hY-AEp" id="Mni-ol-krZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1q5-aP-e48" id="QEc-5l-Bld"/>
-                            <outlet property="delegate" destination="1q5-aP-e48" id="Onm-aA-xqA"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nd9-FC-vxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1888" y="400"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="APw-I6-MUw">
             <objects>
