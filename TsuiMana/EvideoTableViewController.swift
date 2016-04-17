@@ -15,6 +15,11 @@ class EvideoTableViewController: UITableViewController {
     // MARK: - Outlets
 
     // MARK: - Properties
+    var category: Category? {
+        didSet {
+            title = category?.rawValue
+        }
+    }
     var evideos = [Evideo]()
     var isLoading = false
     var page = 1
@@ -56,6 +61,7 @@ class EvideoTableViewController: UITableViewController {
 
     // MARK: - Privates
     private func fetchData(initialize: Bool) {
+        guard let category = category else { return }
         if !isLoading {
             isLoading = true
 
@@ -64,7 +70,7 @@ class EvideoTableViewController: UITableViewController {
                 self.evideos = [Evideo]()
             }
 
-            WebAPIClient().getAllEvideos(page) { result in
+            WebAPIClient().getAllEvideos(page, category: category) { result in
                 switch result {
                 case .Success(let evideos):
                     evideos.forEach { self.evideos.append($0) }

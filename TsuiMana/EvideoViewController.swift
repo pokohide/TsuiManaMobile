@@ -27,7 +27,7 @@ class EvideoViewController: UIViewController {
         var controllers = [UIViewController]()
         Category.values.forEach {
             let controller = EvideoTableViewController()
-            controller.title = $0
+            controller.category = Category(rawValue: $0)
             controllers.append(controller)
         }
    

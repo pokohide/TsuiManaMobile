@@ -15,8 +15,9 @@ class WebAPIClient {
     // MARK: - Properties
     let domain = "http://www.tsuimana.com/api"
 
-    func getAllEvideos(page: Int = 1, callback: Result<[Evideo], NSError> -> Void) {
-        getRequest("evideos", parameters: ["page": page]) { result in
+    func getAllEvideos(page: Int = 1, category: Category, callback: Result<[Evideo], NSError> -> Void) {
+        let path = category == .All ? "evideos" : "evideos/category/\(category.path)"
+        getRequest(path, parameters: ["page": page]) { result in
             switch result {
             case .Success(let value):
                 let json = JSON(value)

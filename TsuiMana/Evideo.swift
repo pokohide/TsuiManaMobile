@@ -19,6 +19,10 @@ enum Category: String {
     case Other = "その他"
 
     static let values = [All, Letsplay, Funny, Girls, Benefit, Music, Other].map { $0.rawValue }
+
+    var path: String {
+        return ["all", "letsplay", "funny", "girls", "benefit", "music", "other"][hashValue]
+    }
 }
 
 struct Evideo {
