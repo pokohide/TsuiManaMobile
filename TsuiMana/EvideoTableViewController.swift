@@ -16,8 +16,8 @@ class EvideoTableViewController: UITableViewController {
 
     // MARK: - Properties
     var evideos = [Evideo]()
-    var is_loading = false
-    var current_page = 1
+    var isLoading = false
+    var page = 1
 
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -56,24 +56,24 @@ class EvideoTableViewController: UITableViewController {
 
     // MARK: - Privates
     private func fetchData(initialize: Bool) {
-        if !is_loading {
-            self.is_loading = true
+        if !isLoading {
+            isLoading = true
 
             if initialize {
-                self.current_page = 1
+                self.page = 1
                 self.evideos = [Evideo]()
             }
 
-            WebAPIClient().getAllEvideos(current_page) { result in
+            WebAPIClient().getAllEvideos(page) { result in
                 switch result {
                 case .Success(let evideos):
                     evideos.forEach { self.evideos.append($0) }
                     self.tableView.reloadData()
-                    self.current_page += 1
+                    self.page += 1
                 case .Failure(let error):
                     print(error)
                 }
-                self.is_loading = false
+                self.isLoading = false
             }
         }
     }
