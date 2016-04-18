@@ -32,12 +32,16 @@ class WebAPIClient {
     
     func getEvideo(id: Int, callback: Result<Evideo, NSError> -> Void) {
         let path = "evideos/\(id)"
-        getRequest(path, parameters: []) { result in
+        getRequest(path, parameters: [:]) { result in
             switch result {
             case .Success(let value):
                 let json = JSON(value)
-                var evideo = Evideo()
-                json["response"]["evideo"]
+                let evideo = Evideo(json: json["response"]["evideo"])
+                var timedtexts = [Timedtext]()
+                json["response"]["timedtexts"].forEach{ timedtexts.append(Timedtext(json: $0.1)) }
+                callback(Result.Success(evideo))
+            case .Failure(let error):
+                callback(Result.Failure(error))
             }
         }
     }

@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct Timedtext {
     // MARK: - Properties
-    var id: Int?
+    var id: String?
     var body: String?
     var half: Bool?
     var japanese: String?
@@ -20,7 +20,7 @@ struct Timedtext {
     var userid: Int?
     var evideoid: Int?
     
-    init(id: Int, body: String, half: Bool, japanese: String, start: Int, userid: Int, evideoid: Int) {
+    init(id: String, body: String, half: Bool, japanese: String, start: Int, userid: Int, evideoid: Int) {
         self.id = id
         self.body = body
         self.half = half
@@ -28,6 +28,18 @@ struct Timedtext {
         self.start = start
         self.userid = userid
         self.evideoid = evideoid
+    }
+    
+    init(json: JSON) {
+        self.init(
+            id: json["id"]["$oid"].stringValue,
+            body: json["body"].stringValue,
+            half: json["half"].boolValue,
+            japanese: json["japanese"].stringValue,
+            start: json["start"].intValue,
+            userid: json["userid"].intValue,
+            evideoid: json["evideoid"].intValue
+        )
     }
     
 }
