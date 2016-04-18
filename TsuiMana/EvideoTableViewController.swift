@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 class EvideoTableViewController: UITableViewController {
 
@@ -26,6 +27,7 @@ class EvideoTableViewController: UITableViewController {
 
     // MARK: - View life cycle
     override func viewDidLoad() {
+        SVProgressHUD.show()
         tableView.registerNib(UINib(nibName: "EvideoTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         fetchData(true)
     }
@@ -79,6 +81,7 @@ class EvideoTableViewController: UITableViewController {
                 case .Failure(let error):
                     print(error)
                 }
+                SVProgressHUD.dismiss()
                 self.isLoading = false
             }
         }
