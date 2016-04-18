@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A65D4101CC30F5C006CF6FA /* EvideoTableVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */; };
+		5A65D4121CC30F88006CF6FA /* EvideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */; };
+		5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADBAD811CC23859003BF58E /* WebAPIClient.swift */; };
 		774ACFEF90C46AF914FDDC75 /* Pods_TsuiMana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3389797425E99B6734707194 /* Pods_TsuiMana.framework */; };
 		F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734B81CB7B21400C5FF0F /* AppDelegate.swift */; };
-		F26734BB1CB7B21400C5FF0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734BA1CB7B21400C5FF0F /* ViewController.swift */; };
+		F26734BB1CB7B21400C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */; };
 		F26734BE1CB7B21400C5FF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26734BC1CB7B21400C5FF0F /* Main.storyboard */; };
 		F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */; };
 		F26734C31CB7B21500C5FF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26734C21CB7B21500C5FF0F /* Assets.xcassets */; };
@@ -18,11 +21,8 @@
 		F26734DC1CB7B21500C5FF0F /* TsuiManaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734DB1CB7B21500C5FF0F /* TsuiManaUITests.swift */; };
 		F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */; };
 		F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734F91CB8392A00C5FF0F /* Evideo.swift */; };
-		F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26734FD1CB840C800C5FF0F /* MenuViewController.swift */; };
 		F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */; };
-		F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */; };
-		F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */; };
-		F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */; };
+		F26735081CBA62DC00C5FF0F /* EvideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26735071CBA62DC00C5FF0F /* EvideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +44,14 @@
 
 /* Begin PBXFileReference section */
 		3389797425E99B6734707194 /* Pods_TsuiMana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsuiMana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvideoTableVIew.xib; sourceTree = "<group>"; };
+		5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvideoTableViewCell.xib; sourceTree = "<group>"; };
+		5ADBAD811CC23859003BF58E /* WebAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIClient.swift; sourceTree = "<group>"; };
 		6F8A4D74B64CA1215CA1FDC3 /* Pods-TsuiMana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.release.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.release.xcconfig"; sourceTree = "<group>"; };
 		854579708B9A5B29236B7C52 /* Pods-TsuiMana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsuiMana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TsuiMana/Pods-TsuiMana.debug.xcconfig"; sourceTree = "<group>"; };
 		F26734B51CB7B21400C5FF0F /* TsuiMana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TsuiMana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26734B81CB7B21400C5FF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F26734BA1CB7B21400C5FF0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvideoViewController.swift; sourceTree = "<group>"; };
 		F26734BD1CB7B21400C5FF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F26734C01CB7B21500C5FF0F /* TsuiMana.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TsuiMana.xcdatamodel; sourceTree = "<group>"; };
 		F26734C21CB7B21500C5FF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,11 +65,8 @@
 		F26734DD1CB7B21500C5FF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26734F51CB82B3600C5FF0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F26734F91CB8392A00C5FF0F /* Evideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evideo.swift; sourceTree = "<group>"; };
-		F26734FD1CB840C800C5FF0F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoTableViewController.swift; sourceTree = "<group>"; };
-		F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewCell.swift; sourceTree = "<group>"; };
-		F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoViewController.swift; sourceTree = "<group>"; };
-		F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoFunction.swift; sourceTree = "<group>"; };
+		F26735071CBA62DC00C5FF0F /* EvideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ADBAD6D1CC2324E003BF58E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F26734F91CB8392A00C5FF0F /* Evideo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5ADBAD6E1CC23257003BF58E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5ADBAD811CC23859003BF58E /* WebAPIClient.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		5ADBAD6F1CC2325C003BF58E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F26734BA1CB7B21400C5FF0F /* EvideoViewController.swift */,
+				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5ADBAD701CC23265003BF58E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F26735071CBA62DC00C5FF0F /* EvideoTableViewCell.swift */,
+				5A65D40F1CC30F5C006CF6FA /* EvideoTableVIew.xib */,
+				5A65D4111CC30F88006CF6FA /* EvideoTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5ADBAD711CC232AA003BF58E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F26734BC1CB7B21400C5FF0F /* Main.storyboard */,
+				F26734C21CB7B21500C5FF0F /* Assets.xcassets */,
+				F26734C41CB7B21500C5FF0F /* LaunchScreen.storyboard */,
+				F26734C71CB7B21500C5FF0F /* Info.plist */,
+				F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		639F8C59036BD29D19FBC618 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,18 +186,11 @@
 			isa = PBXGroup;
 			children = (
 				F26734B81CB7B21400C5FF0F /* AppDelegate.swift */,
-				F26734FD1CB840C800C5FF0F /* MenuViewController.swift */,
-				F26734F91CB8392A00C5FF0F /* Evideo.swift */,
-				F267350B1CBABA4600C5FF0F /* EvideoFunction.swift */,
-				F26735071CBA62DC00C5FF0F /* EvideoViewCell.swift */,
-				F26735091CBAB4CC00C5FF0F /* EvideoViewController.swift */,
-				F26735051CBA5A1400C5FF0F /* EvideoTableViewController.swift */,
-				F26734BA1CB7B21400C5FF0F /* ViewController.swift */,
-				F26734BC1CB7B21400C5FF0F /* Main.storyboard */,
-				F26734C21CB7B21500C5FF0F /* Assets.xcassets */,
-				F26734C41CB7B21500C5FF0F /* LaunchScreen.storyboard */,
-				F26734C71CB7B21500C5FF0F /* Info.plist */,
-				F26734BF1CB7B21500C5FF0F /* TsuiMana.xcdatamodeld */,
+				5ADBAD6E1CC23257003BF58E /* Utilities */,
+				5ADBAD6D1CC2324E003BF58E /* Models */,
+				5ADBAD6F1CC2325C003BF58E /* ViewControllers */,
+				5ADBAD701CC23265003BF58E /* Views */,
+				5ADBAD711CC232AA003BF58E /* Resources */,
 			);
 			path = TsuiMana;
 			sourceTree = "<group>";
@@ -284,7 +324,9 @@
 				F26734C61CB7B21500C5FF0F /* LaunchScreen.storyboard in Resources */,
 				F26734C31CB7B21500C5FF0F /* Assets.xcassets in Resources */,
 				F26734BE1CB7B21400C5FF0F /* Main.storyboard in Resources */,
+				5A65D4121CC30F88006CF6FA /* EvideoTableViewCell.xib in Resources */,
 				F26734F61CB82B3600C5FF0F /* Default-568h@2x.png in Resources */,
+				5A65D4101CC30F5C006CF6FA /* EvideoTableVIew.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,14 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26734BB1CB7B21400C5FF0F /* ViewController.swift in Sources */,
-				F26735081CBA62DC00C5FF0F /* EvideoViewCell.swift in Sources */,
+				F26734BB1CB7B21400C5FF0F /* EvideoViewController.swift in Sources */,
+				F26735081CBA62DC00C5FF0F /* EvideoTableViewCell.swift in Sources */,
 				F26734C11CB7B21500C5FF0F /* TsuiMana.xcdatamodeld in Sources */,
 				F26734FA1CB8392A00C5FF0F /* Evideo.swift in Sources */,
-				F267350A1CBAB4CC00C5FF0F /* EvideoViewController.swift in Sources */,
-				F26734FE1CB840C800C5FF0F /* MenuViewController.swift in Sources */,
+				5ADBAD821CC23859003BF58E /* WebAPIClient.swift in Sources */,
 				F26735061CBA5A1400C5FF0F /* EvideoTableViewController.swift in Sources */,
-				F267350C1CBABA4600C5FF0F /* EvideoFunction.swift in Sources */,
 				F26734B91CB7B21400C5FF0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
