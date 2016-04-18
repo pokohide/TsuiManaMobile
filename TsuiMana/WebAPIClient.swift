@@ -29,6 +29,18 @@ class WebAPIClient {
             }
         }
     }
+    
+    func getEvideo(id: Int, callback: Result<Evideo, NSError> -> Void) {
+        let path = "evideos/\(id)"
+        getRequest(path, parameters: []) { result in
+            switch result {
+            case .Success(let value):
+                let json = JSON(value)
+                var evideo = Evideo()
+                json["response"]["evideo"]
+            }
+        }
+    }
 
     // MARK: - Privates
     private func getRequest(path: String, parameters: [String: AnyObject], callback: Result<AnyObject, NSError> -> Void) {

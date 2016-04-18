@@ -58,7 +58,12 @@ class EvideoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //let cell = tableView.cellForRowAtIndexPath(indexPath) as! ClubListViewCell
         //self.performSegueWithIdentifier("showClub", sender: cell)
-        print(indexPath)
+        let evideoShow = EvideoShowViewController()
+        if var evideo = evideoShow.evideo {
+            evideo.id = evideos[indexPath.row].id
+            print(evideo.id)
+        }
+        self.navigationController?.pushViewController(evideoShow, animated: true)
     }
 
     // MARK: - Privates
