@@ -32,7 +32,7 @@ class WebAPIClient {
     
     func getEvideo(id: Int, callback: Result<Evideo, NSError> -> Void) {
         let path = "evideos/\(id)"
-        getRequest(path, parameters: [:]) { result in
+        getRequest(path, parameters: ["page": 1]) { result in
             switch result {
             case .Success(let value):
                 let json = JSON(value)

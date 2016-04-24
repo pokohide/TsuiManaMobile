@@ -11,7 +11,7 @@ target 'TsuiMana' do
   pod 'RealmSwift'
   pod "PullToRefreshSwift"
   pod 'ObjectMapper'
-  pod "youtube-ios-player-helper", "~> 0.1.4"
+  pod 'YouTubePlayer'
 end
 
 target 'TsuiManaTests' do

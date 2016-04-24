@@ -59,10 +59,7 @@ class EvideoTableViewController: UITableViewController {
         //let cell = tableView.cellForRowAtIndexPath(indexPath) as! ClubListViewCell
         //self.performSegueWithIdentifier("showClub", sender: cell)
         let evideoShow = EvideoShowViewController()
-        if var evideo = evideoShow.evideo {
-            evideo.id = evideos[indexPath.row].id
-            print(evideo.id)
-        }
+        evideoShow.evideoId = evideos[indexPath.row].id
         self.navigationController?.pushViewController(evideoShow, animated: true)
     }
 
